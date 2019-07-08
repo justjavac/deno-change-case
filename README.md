@@ -24,22 +24,22 @@ camelCase("test string");
 
 **Available methods** (short-hand shown below, long-hand available in examples):
 
-- [x] [`camel`](#camelcase)
-- [x] [`constant`](#constantcase)
-- [x] [`dot`](#dotcase)
-- [x] [`header`](#headercase)
-- [x] [`lower`](#lowercase)
-- [x] [`lowerFirst`](#lowerfirstcase)
-- [x] [`normal`](#normalcase)- aliases: [`no`, `clear`]
-- [x] [`param`](#paramcase) - aliases: [`kebab`, `hyphen`]
-- [x] [`pascal`](#pascalcase)
-- [x] [`path`](#pathcase)
-- [x] [`sentence`](#sentencecase)
-- [x] [`snake`](#snakecase)
-- [ ] [`swap`](#swapcase)
-- [x] [`title`](#titlecase)
-- [x] [`upper`](#uppercase)
-- [x] [`upperFirst`](#upperfirstcase)
+- [`camel`](#camelcase)
+- [`constant`](#constantcase)
+- [`dot`](#dotcase)
+- [`header`](#headercase)
+- [`lower`](#lowercase)
+- [`lowerFirst`](#lowerfirstcase)
+- [`normal`](#normalcase)- aliases: [`no`, `clear`]
+- [`param`](#paramcase) - aliases: [`kebab`, `hyphen`]
+- [`pascal`](#pascalcase)
+- [`path`](#pathcase)
+- [`sentence`](#sentencecase)
+- [`snake`](#snakecase)
+- [`swap`](#swapcase)
+- [`title`](#titlecase)
+- [`upper`](#uppercase)
+- [`upperFirst`](#upperfirstcase)
 
 All methods accept two arguments, the string to change case and an optional locale.
 
