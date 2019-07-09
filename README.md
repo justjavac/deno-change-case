@@ -9,7 +9,7 @@ All methods support Unicode (non-ASCII characters) and non-string entities, such
 ## Usage
 
 ```ts
-import { camelCase } from "https://raw.githubusercontent.com/justjavac/deno-change-case/master/mod.ts";
+import { camelCase } from "https://deno.land/x/case/mod.ts";
 camelCase("test string");
 // => 'testString'
 ```
@@ -17,7 +17,7 @@ camelCase("test string");
 or
 
 ```ts
-import camelCase from "https://raw.githubusercontent.com/justjavac/deno-change-case/master/camelCase.ts";
+import camelCase from "https://deno.land/x/case/camelCase.ts";
 camelCase("test string");
 // => 'testString'
 ```
