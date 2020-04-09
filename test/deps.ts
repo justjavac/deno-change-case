@@ -1,4 +1,5 @@
-export { test, runTests } from "https://deno.land/std/testing/mod.ts";
+const { test } = Deno;
+export { test }
 export {
   assert,
   assertEquals,

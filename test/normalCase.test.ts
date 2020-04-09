@@ -2,7 +2,9 @@ import { test, assertEquals } from "./deps.ts";
 
 import normalCase from "../normalCase.ts";
 
-const TESTS: Array<[string, string, string?, string?]> = [
+type NullableString = string | null
+
+const TESTS: Array<[NullableString | undefined, string, NullableString?, string?]> = [
   // Single words.
   ["test", "test"],
   ["TEST", "test"],

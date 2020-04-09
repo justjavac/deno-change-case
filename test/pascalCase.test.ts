@@ -43,6 +43,6 @@ test({
 test({
   name: "should merge numbers",
   fn: (): void => {
-    assertEquals(pascalCase("test 1 2 3", null, true), "Test123");
+    assertEquals(pascalCase("test 1 2 3", undefined, true), "Test123");
   }
 });

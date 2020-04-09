@@ -44,12 +44,11 @@ const LANGUAGES: LanguageSpecific = {
  * @param  {String} str
  * @return {String}
  */
-export default function(str: string, locale?: string): string {
-  const lang = LANGUAGES[locale];
-
+export default function(str?: string | null, locale?: keyof typeof LANGUAGES | null): string {
   str = str == null ? "" : String(str);
 
-  if (lang) {
+  if (locale) {
+    const lang = LANGUAGES[locale];
     str = str.replace(lang.regexp, (m: string): string => lang.map[m]);
   }
 

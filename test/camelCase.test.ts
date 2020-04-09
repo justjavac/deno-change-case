@@ -58,6 +58,6 @@ test({
 test({
   name: "should enable number grouping",
   fn: (): void => {
-    assertEquals(camelCase("test 1 2 3", null, true), "test123");
+    assertEquals(camelCase("test 1 2 3", undefined, true), "test123");
   }
 });

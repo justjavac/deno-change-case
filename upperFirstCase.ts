@@ -1,6 +1,6 @@
 import upperCase from "./upperCase.ts";
 
-export default function(str: string, locale?: string): string {
+export default function(str?: string | null, locale?: string): string {
   if (str == null) {
     return "";
   }

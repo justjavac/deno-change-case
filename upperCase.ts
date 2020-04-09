@@ -26,12 +26,11 @@ const LANGUAGES: LanguageSpecific = {
   }
 };
 
-export default function(str: string, locale?: string): string {
-  const lang = LANGUAGES[locale];
-
+export default function(str?: string | null, locale?: keyof typeof LANGUAGES): string {
   str = str == null ? "" : String(str);
 
-  if (lang) {
+  if (locale) {
+    const lang = LANGUAGES[locale];
     str = str.replace(lang.regexp, function(m) {
       return lang.map[m];
     });

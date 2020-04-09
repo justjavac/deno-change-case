@@ -5,8 +5,8 @@ import camelCaseRegexp from "./vendor/camelCaseRegexp.ts";
 import camelCaseUpperRegexp from "./vendor/camelCaseUpperRegexp.ts";
 
 export default function normalCase(
-  str: string,
-  locale?: string,
+  str?: string | null,
+  locale?: string | null,
   replacement?: string
 ): string {
   if (str == null) {
@@ -20,7 +20,7 @@ export default function normalCase(
       return "";
     }
 
-    return replacement;
+    return replacement as string;
   }
 
   str = String(str)
