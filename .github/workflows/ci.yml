@@ -1,0 +1,32 @@
+name: Deno Change Case CI
+
+on: push
+
+jobs:
+  build:
+    name: ${{ matrix.kind }} ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macOS-latest, ubuntu-16.04, windows-latest]
+
+    env:
+      GH_ACTIONS: true
+      DENO_BUILD_MODE: release
+      V8_BINARY: true
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Deno
+      uses: denolib/setup-deno@master
+      with:
+        deno-version: 0.x
+
+    - name: Cache Deno Generated Files
+      uses: actions/cache@v1
+      with:
+        path: ~/.cache/deno
+        key: ${{ runner.os }}-deno-cache-${{ hashFiles('**/mod.ts') }}
+
+    - name: Test
+      run: deno run test/test.ts
