@@ -1,4 +1,4 @@
-import { test, assertEquals } from "./deps.ts";
+import { assertEquals } from "./deps.ts";
 
 import normalCase from "../normalCase.ts";
 
@@ -41,16 +41,16 @@ const TESTS: Array<[string, string, string?, string?]> = [
   ["version 4_99/4", "version 4 99 4"],
 
   // Odd input.
-  [null, ""],
+  [null as any, ""],
   [undefined, ""],
   [(10 as unknown) as string, "10"],
   [
     ({
-      toString: function() {
+      toString: function () {
         return "test";
-      }
+      },
     } as unknown) as string,
-    "test"
+    "test",
   ],
 
   // Whitespace.
@@ -65,19 +65,19 @@ const TESTS: Array<[string, string, string?, string?]> = [
   ["something_2014_other", "something 2014 other"],
 
   // Custom replacement character
-  ["HELLO WORLD!", "hello_world", null, "_"],
-  ["foo bar!", "foobar", null, ""],
+  ["HELLO WORLD!", "hello_world", null as any, "_"],
+  ["foo bar!", "foobar", null as any, ""],
 
   // Custom locale.
   ["A STRING", "a strıng", "tr"],
 
   // https://github.com/blakeembrey/change-case/issues/21
   ["amazon s3 data", "amazon s3 data"],
-  ["foo_13_bar", "foo 13 bar"]
+  ["foo_13_bar", "foo 13 bar"],
 ];
 
-test(function shouldConvertCase(): void {
-  TESTS.forEach(function(test): void {
+Deno.test(function shouldConvertCase(): void {
+  TESTS.forEach(function (test): void {
     const before = test[0];
     const after = test[1];
     const locale = test[2];

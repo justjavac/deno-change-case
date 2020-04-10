@@ -1,6 +1,6 @@
 name: Deno Change Case CI
 
-on: push
+on: [push, pull_request]
 
 jobs:
   build:
@@ -28,5 +28,8 @@ jobs:
         path: ~/.cache/deno
         key: ${{ runner.os }}-deno-cache-${{ hashFiles('**/mod.ts') }}
 
-    - name: Test
-      run: deno run test/test.ts
+    - name: Format
+      run: deno fmt --check
+
+    - name: Tests
+      run: deno test

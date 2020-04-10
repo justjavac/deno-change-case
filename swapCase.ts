@@ -1,7 +1,7 @@
 import upperCase from "./upperCase.ts";
 import lowerCase from "./lowerCase.ts";
 
-export default function(str: string, locale?: string): string {
+export default function (str: string, locale?: string): string {
   if (str == null) {
     return "";
   }
