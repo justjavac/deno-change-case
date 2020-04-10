@@ -4,7 +4,7 @@ import normalCase from "./normalCase.ts";
 export default function camelCase(
   value: string,
   locale?: string,
-  mergeNumbers?: boolean
+  mergeNumbers?: boolean,
 ): string {
   let result = normalCase(value, locale);
 
@@ -14,7 +14,7 @@ export default function camelCase(
   }
 
   // Replace spaces between words with an upper cased character.
-  return result.replace(/ (.)/g, function(m: string, $1: string): string {
+  return result.replace(/ (.)/g, function (m: string, $1: string): string {
     return upperCase($1, locale);
   });
 }
