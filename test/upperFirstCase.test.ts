@@ -1,9 +1,9 @@
-import { test, assertEquals } from "./deps.ts";
+import { assertEquals } from "./deps.ts";
 
 import upperFirstCase from "../upperFirstCase.ts";
 
-test(function shouldConvertCase(): void {
-  assertEquals(upperFirstCase(null), "");
+Deno.test(function shouldConvertCase(): void {
+  assertEquals(upperFirstCase(null as unknown as string), "");
   assertEquals(upperFirstCase("test"), "Test");
   assertEquals(upperFirstCase("TEST"), "TEST");
 });

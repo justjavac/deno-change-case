@@ -4,14 +4,14 @@ const LANGUAGES: LanguageSpecific = {
   tr: {
     regexp: /[\u0069]/g,
     map: {
-      i: "\u0130"
-    }
+      i: "\u0130",
+    },
   },
   az: {
     regexp: /[\u0069]/g,
     map: {
-      i: "\u0130"
-    }
+      i: "\u0130",
+    },
   },
   lt: {
     regexp: /[\u0069\u006A\u012F]\u0307|\u0069\u0307[\u0300\u0301\u0303]/g,
@@ -21,18 +21,22 @@ const LANGUAGES: LanguageSpecific = {
       į̇: "\u012E",
       i̇̀: "\u00CC",
       i̇́: "\u00CD",
-      i̇̃: "\u0128"
-    }
-  }
+      i̇̃: "\u0128",
+    },
+  },
 };
 
-export default function(str: string, locale?: string): string {
-  const lang = LANGUAGES[locale];
-
+export default function (str: string, locale?: string): string {
   str = str == null ? "" : String(str);
 
+  if (!locale) {
+    return str.toUpperCase();
+  }
+
+  const lang = LANGUAGES[locale];
+
   if (lang) {
-    str = str.replace(lang.regexp, function(m) {
+    str = str.replace(lang.regexp, function (m) {
       return lang.map[m];
     });
   }

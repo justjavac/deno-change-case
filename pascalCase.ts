@@ -4,7 +4,7 @@ import upperFirstCase from "./upperFirstCase.ts";
 export default function pascalCase(
   value: string,
   locale?: string,
-  mergeNumbers?: boolean
+  mergeNumbers?: boolean,
 ): string {
   return upperFirstCase(camelCase(value, locale, mergeNumbers), locale);
 }
