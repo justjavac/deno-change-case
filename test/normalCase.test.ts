@@ -76,7 +76,7 @@ const TESTS: Array<[string, string, string?, string?]> = [
   ["foo_13_bar", "foo 13 bar"],
 ];
 
-Deno.test(function shouldConvertCase(): void {
+Deno.test("shouldConvertCase", function (): void {
   TESTS.forEach(function (test): void {
     const before = test[0];
     const after = test[1];

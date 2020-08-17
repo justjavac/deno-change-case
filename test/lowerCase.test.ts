@@ -2,12 +2,12 @@ import { assertEquals } from "./deps.ts";
 
 import lowerCase from "../lowerCase.ts";
 
-Deno.test(function shouldConvertCase(): void {
+Deno.test("shouldConvertCase", function (): void {
   assertEquals(lowerCase(null as any), "");
   assertEquals(lowerCase("TEST"), "test");
   assertEquals(lowerCase("test"), "test");
 });
 
-Deno.test(function shouldSupportLocaleOverride() {
+Deno.test("shouldSupportLocaleOverride", function () {
   assertEquals(lowerCase("I", "tr"), "\u0131");
 });
