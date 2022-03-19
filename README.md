@@ -1,10 +1,15 @@
 # Change Case
 
-Convert strings between `camelCase`, `PascalCase`, `Title Case`, `snake_case`, `lowercase`, `UPPERCASE`, `CONSTANT_CASE` and more.
+Convert strings between `camelCase`, `PascalCase`, `Title Case`, `snake_case`,
+`lowercase`, `UPPERCASE`, `CONSTANT_CASE` and more.
 
-All methods support Unicode (non-ASCII characters) and non-string entities, such as objects with a `toString` property, numbers and booleans. Empty values (`null` and `undefined`) will result in an empty string.
+All methods support Unicode (non-ASCII characters) and non-string entities, such
+as objects with a `toString` property, numbers and booleans. Empty values
+(`null` and `undefined`) will result in an empty string.
 
-**Source code based on [blakeembrey/change-case](https://github.com/blakeembrey/change-case) with TypeScript.**
+**Source code based on
+[blakeembrey/change-case](https://github.com/blakeembrey/change-case) with
+TypeScript.**
 
 ## Usage
 
@@ -41,11 +46,13 @@ camelCase("test string");
 - [`upper`](#uppercase)
 - [`upperFirst`](#upperfirstcase)
 
-All methods accept two arguments, the string to change case and an optional locale.
+All methods accept two arguments, the string to change case and an optional
+locale.
 
 ### camelCase
 
-Return as a string with the separators denoted by having the next letter capitalized.
+Return as a string with the separators denoted by having the next letter
+capitalized.
 
 ```ts
 camelCase("test string");
@@ -125,7 +132,8 @@ paramCase("test string");
 
 ### pascalCase
 
-Return as a string denoted in the same fashion as `camelCase`, but with the first letter also capitalized.
+Return as a string denoted in the same fashion as `camelCase`, but with the
+first letter also capitalized.
 
 ```ts
 pascalCase("test string");
@@ -170,7 +178,8 @@ swapCase("Test String");
 
 ### titleCase
 
-Return as a space separated string with the first character of every word upper cased.
+Return as a space separated string with the first character of every word upper
+cased.
 
 ```ts
 titleCase("a simple test");
@@ -201,4 +210,5 @@ upperFirstCase("test");
 
 ### License
 
-deno-change-case is released under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
+deno-change-case is released under the MIT License. See the bundled
+[LICENSE](./LICENSE) file for details.
