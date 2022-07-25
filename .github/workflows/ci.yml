@@ -16,7 +16,7 @@ jobs:
       V8_BINARY: true
     
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - name: Setup Deno
       uses: denoland/setup-deno@v1
 
