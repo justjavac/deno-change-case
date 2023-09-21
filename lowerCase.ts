@@ -39,10 +39,14 @@ const LANGUAGES: LanguageSpecific = {
 };
 
 /**
- * Lowercase a string.
+ * Convert a `string` to lower case.
  *
- * @param  {String} str
- * @return {String}
+ * Example:
+ *
+ * ```ts
+ * lowerCase("TEST STRING");
+ * //=> "test string"
+ * ```
  */
 export default function (str: string, locale?: string): string {
   str = str == null ? "" : String(str);

@@ -26,6 +26,16 @@ const LANGUAGES: LanguageSpecific = {
   },
 };
 
+/**
+ * Convert a `string` to upper case.
+ *
+ * Example:
+ *
+ * ```ts
+ * upperCase("test string");
+ * //=> "TEST STRING"
+ * ```
+ */
 export default function (str: string, locale?: string): string {
   str = str == null ? "" : String(str);
 

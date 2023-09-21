@@ -1,3 +1,4 @@
+// deno-lint-ignore-file no-explicit-any
 import { assertEquals } from "./deps.ts";
 
 import lowerFirstCase from "../lowerFirstCase.ts";

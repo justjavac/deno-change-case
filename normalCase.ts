@@ -4,6 +4,22 @@ import nonWordRegexp from "./vendor/nonWordRegexp.ts";
 import camelCaseRegexp from "./vendor/camelCaseRegexp.ts";
 import camelCaseUpperRegexp from "./vendor/camelCaseUpperRegexp.ts";
 
+/**
+ * Convert a `string` to normal case.
+ *
+ * Example:
+ *
+ * ```ts
+ * normalCase("test string");
+ * //=> "test string"
+ *
+ * normalCase("testString");
+ * //=> "test string"
+ *
+ * normalCase("Test-String");
+ * //=> "test string"
+ * ```
+ */
 export default function normalCase(
   str: string,
   locale?: string,
